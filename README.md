@@ -23,11 +23,8 @@ XGBoost is one of the most powerful and widely used tree-based algorithms for fo
 
 ---
 
-## 🖥️ Screenshot
 
-*(Add a screenshot from your app here — chart, table, UI, etc.)*
 
----
 
 ## 📊 Model Performance
 
@@ -39,7 +36,6 @@ XGBoost is one of the most powerful and widely used tree-based algorithms for fo
 
 ✅ Excellent real-world performance with minimal error!
 
----
 
-## 📁 Project Structure
+
 
