@@ -1,0 +1,26 @@
+# train_model.py
+import pandas as pd
+import pickle
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+
+# Load your dataset
+df = pd.read_csv("your_dataset.csv")  # Replace with your real file
+df['datetime'] = pd.to_datetime(df['datetime'])
+df['hour'] = df['datetime'].dt.hour
+df['dayofweek'] = df['datetime'].dt.dayofweek
+
+# Define features and target
+features = ['hour', 'dayofweek']  # You can add more features here
+X = df[features]
+y = df['load']
+
+# Train model
+model = LinearRegression()
+model.fit(X, y)
+
+# Save model
+with open("model.pkl", "wb") as f:
+    pickle.dump(model, f)
+
+print("✅ Model trained and saved as model.pkl")
